@@ -5,6 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 
 import constants.Credentials;
 import constants.Urls;
+import io.qameta.allure.Step;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -23,6 +24,7 @@ public class LoginPage {
     private SelenideElement passwordInput = $(By.xpath("//input[@type='password']"));
     private SelenideElement loginButton = $(By.xpath("//span[text()='Login']"));
 
+    @Step("Log in to MoodPanda")
     public MainPage login(String email, String password) {
         LOGGER.debug(String.format("Attempt to oppen Ural %s:", Urls.LOGIN_URL));
         open(Urls.LOGIN_URL);

@@ -1,6 +1,7 @@
 package tests;
 
 import constants.Credentials;
+import io.qameta.allure.Description;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.testng.Assert;
@@ -11,6 +12,7 @@ public class LoginTest extends BaseTests {
     private static final Logger LOGGER = LogManager.getLogger(LoginTest.class.getName());
 
     @Test
+    @Description("User tries to log in to MoodPanda")
     public void loginTest() {
 
         LoginPage loginPage = new LoginPage();

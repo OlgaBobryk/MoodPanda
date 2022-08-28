@@ -2,6 +2,7 @@ package tests;
 
 
 import constants.Credentials;
+import io.qameta.allure.Description;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.testng.Assert;
@@ -15,6 +16,7 @@ public class NewFirstNameTest {
     private static final Logger LOGGER = LogManager.getLogger(NewFirstNameTest.class.getName());
 
     @Test
+    @Description("User tries to change his first name")
     public void updateFirstName() {
         LoginPage loginPage = new LoginPage();
         LOGGER.info(String.format("Page %s initialized", LoginPage.class.getName()));
@@ -28,11 +30,11 @@ public class NewFirstNameTest {
         dashboard.openProfile();
         MyProfilePage myProfile = new MyProfilePage();
         LOGGER.info(String.format("Page %s initialized", MyProfilePage.class.getName()));
-        LOGGER.info(String.format("Change first nsme"));
+        LOGGER.info(String.format("Change the first nsme"));
         myProfile.updateFirstName();
         LOGGER.info(String.format("Save change"));
         myProfile.clickSaveButton();
-        LOGGER.info(String.format("Check if new First Name in this profile  and expected First Name  are identical"));
+        LOGGER.info(String.format("Check if the new First Name in this profile  and expected First Name  are identical"));
         Assert.assertEquals(myProfile.NameAfterUpdate(), "Olja P", "Firstname wasn't update");
     }
 }

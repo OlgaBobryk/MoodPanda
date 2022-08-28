@@ -1,6 +1,7 @@
 package tests;
 
 import constants.Credentials;
+import io.qameta.allure.Description;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.testng.Assert;
@@ -13,6 +14,7 @@ public class SendHugTest extends BaseTests {
     private static final Logger LOGGER = LogManager.getLogger(SendHugTest.class.getName());
 
     @Test
+    @Description("User tries to send hug to any message")
     public void hug() {
         LoginPage loginPage = new LoginPage();
         LOGGER.info(String.format("Page %s initialized", LoginPage.class.getName()));
