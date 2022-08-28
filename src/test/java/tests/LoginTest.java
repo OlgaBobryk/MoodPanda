@@ -8,7 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 
-public class LoginTest extends BaseTests {
+public class LoginTest extends BaseTest {
     private static final Logger LOGGER = LogManager.getLogger(LoginTest.class.getName());
 
     @Test

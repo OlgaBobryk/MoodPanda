@@ -10,7 +10,7 @@ import pages.LoginPage;
 import pages.MainPage;
 import pages.UserForHugPage;
 
-public class SendHugTest extends BaseTests {
+public class SendHugTest extends BaseTest {
     private static final Logger LOGGER = LogManager.getLogger(SendHugTest.class.getName());
 
     @Test

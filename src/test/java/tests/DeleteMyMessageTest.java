@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import pages.*;
 
 
-public class DeleteMyMessageTest extends BaseTests {
+public class DeleteMyMessageTest extends BaseTest {
     private static final Logger LOGGER = LogManager.getLogger(DeleteMyMessageTest.class.getName());
 
 

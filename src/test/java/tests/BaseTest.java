@@ -2,10 +2,13 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
+import utils.TestListeners;
 
 import java.awt.*;
+@Listeners(TestListeners.class)
 
-public class BaseTests {
+public class BaseTest {
     @BeforeSuite
     public void setUp() {
         Configuration.timeout = 6000;
